@@ -14,6 +14,7 @@ module Yoda
           parsed_response['data']
         end
       end
+
     end
 
     def self.find(id)

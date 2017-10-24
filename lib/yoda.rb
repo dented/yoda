@@ -1,4 +1,5 @@
 require 'httparty'
+require 'hashie'
 require "yoda/errors"
 require "yoda/base"
 require "yoda/startup"

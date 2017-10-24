@@ -13,4 +13,11 @@ RSpec.describe Yoda::User  do
     expect(users).not_to be_empty
   end
 
+  it 'gets a page of users and check if deep links' do
+    users = Yoda::User.all
+
+    expect(users.first.id).not_to be_empty
+    expect(users.first.profile['first_name']).not_to be_empty
+  end
+
 end

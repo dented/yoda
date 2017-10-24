@@ -6,8 +6,8 @@ module Yoda
 
     def initialize(attributes=nil)
       attributes ||= {}
-      @created_at = attributes.delete('created_at')
       attributes.each do |(attr, val)|
+        # self[attr] = val
         instance_variable_set("@#{attr}", val)
         instance_eval "def #{attr}() @#{attr} end"
       end
@@ -15,10 +15,6 @@ module Yoda
 
     def get(*args, &block)
       self.class.get(*args, &block)
-    end
-
-    def created_at
-      parse_time(@created_at)
     end
 
     def ==(other)

@@ -1,5 +1,6 @@
 require "bundler/setup"
 require "yoda"
+require 'pry-byebug'
 
 # require 'webmock/rspec'
 # require 'support/vcr_setup'
