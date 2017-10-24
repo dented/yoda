@@ -2,7 +2,7 @@ module Yoda
   class Base
     include HTTParty
 
-    base_uri "https://scarif-api.herokuapp.com/v1"
+    base_uri "https://scarif-api.herokuapp.com/sith"
 
     def initialize(attributes=nil)
       attributes ||= {}

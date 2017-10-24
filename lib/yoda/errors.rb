@@ -5,5 +5,7 @@ module Yoda
     class Error                     < StandardError; end
 
     class StartupNotFound           < StandardError; end
+    class CampaignNotFound          < StandardError; end
+    class UserNotFound              < StandardError; end
   end
 end

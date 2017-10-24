@@ -5,10 +5,14 @@ module Yoda
       response = get(url, options)
 
       if response.response.is_a?(Net::HTTPNotFound)
-        raise StartupNotFound
+        raise Yoda::StartupNotFound
       else
         parsed_response = JSON.parse(response.body)
-        parsed_response['data']
+        if parsed_response['data'] == nil
+          raise Yoda::StartupNotFound
+        else
+          parsed_response['data']
+        end
       end
     end
 
