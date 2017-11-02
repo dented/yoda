@@ -7,11 +7,13 @@ RSpec.describe Yoda::Startup  do
   end
 
   it 'gets a single startup' do
-    startup = Yoda::Startup.find('mb78dc5mJbU79zHK')
+    id = 'mb78dc5mJbU79zHK'
+    startup = Yoda::Startup.find(id)
 
     # binding.pry
     expect(startup).to be_instance_of(Yoda::Startup)
     expect(startup.name).to eq('AngelHub')
+    expect(startup.id).to eq(id)
   end
 
   it 'gets a page of startups' do

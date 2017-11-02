@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    yoda (0.1.0.1)
+    yoda (0.1.0.2)
       hashie
       httparty
       json
