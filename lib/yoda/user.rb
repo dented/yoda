@@ -18,7 +18,7 @@ module Yoda
 
     def self.find(id)
       response = fetch("/users/#{id}")
-      new(response['user'])
+      new(response)
     end
 
     def self.all(options={})
